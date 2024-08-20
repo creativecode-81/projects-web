@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style_login.css">
+    <title>Login de Netflix | Programación Creativa</title>
+</head>
+<body>
+    <nav>
+        <a href="#">
+            <img src="img/logo.svg" alt="Logo">
+        </a>
+    </nav>
+
+    <div class="form-wrapper">
+        <h2>Inicia sesión</h2>
+        <form action="#">
+            <div class="form-control">
+                <input type="text" required>
+                <label>Email o número de teléfono</label>
+            </div>
+            <div class="form-control">
+                <input type="password" required>
+                <label>Contraseña</label>
+            </div>
+            <button type="submit">Iniciar sesión</button>
+            <div class="form-help">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Recuérdame</label>
+                </div>
+                <a href="#">¿Nececitas ayuda?</a>
+            </div>
+        </form>
+        <p>¿Primera vez en Netflix? <a href="home.html">Suscríbete ahora.</a></p>
+        <small>Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot.
+            <a href="#">Más info.</a>
+        </small>
+    </div>
+
+    <footer>
+        <div class="footer-divider"></div>
+        <div class="footer_info">
+            <p>¿Preguntas? Llama al <a href="#">0-800-52352</a></p>
+        </div>
+        <ul class="footer_links">
+            <li class="footer_links__item"><a href="#">Preguntas frecuentes</a></li>
+            <li class="footer_links__item"><a href="#">Centro de ayuda</a></li>
+            <li class="footer_links__item"><a href="#">Términos de uso</a></li>
+            <li class="footer_links__item"><a href="#">Privacidad</a></li>
+            <li class="footer_links__item"><a href="#">Preferencias de cookies</a></li>
+            <li class="footer_links__item"><a href="#">Información corporativa</a></li>
+        </ul>
+
+        <div class="btn_Language"> <i class="fa-solid fa-globe"></i>
+            <div class="selectedLanguaje">
+                <select name="selected" id="selected">
+                    <option>Español</option>
+                    <option>English</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

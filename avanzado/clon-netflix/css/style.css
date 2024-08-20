@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+.header {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(103.24deg, rgba(0, 8, 29, 0.9) 23.83%, rgba(0, 8, 29, 0.3) 96.1%), url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 150px;
+    margin-left: -55px;
+    cursor: pointer;
+}
+
+nav button {
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 12px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn_Language {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(103.24deg, rgba(0, 8, 29, 0.9) 23.83%, rgba(0, 8, 29, 0.3) 96.1%);
+    border: 1px solid #ccc;
+    padding: 4px 1px;
+    border-radius: 4px;
+}
+
+.btn_Language i {
+    position: relative;
+    left: 5px;
+}
+
+.selectedLanguaje select {
+    height: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    user-select: none;
+    color: #fff;
+    position: relative;
+    left: 10px;
+}
+
+.selectedLanguaje select option {
+    color: #000;
+}
+
+.selectedLanguaje i {
+    position: relative;
+    left: -8px;
+}
+
+.header_Content {
+    width: 100%;
+    max-width: 1824px;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    margin-top: 100px;
+    margin-left: 0px;
+}
+
+.header_Content h1 {
+    color: rgba(255, 255, 255, 1);
+    font-size: 3rem;
+    line-height: 70px;
+    /* max-width: 650px; */
+    margin: 0.67em 0;
+    font-weight: 700;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+
+.header_Content p {
+    font-size: 1.125rem;
+    text-align: center;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    margin: 0.67em 0;
+}
+
+.header_Content h3 {
+    color: rgba(255, 255, 255, 1);
+    text-align: start;
+}
+
+
+.email_Signup {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    max-width: 36.625rem;
+    background: transparent;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    border: 0 solid transparent;
+    padding: 0 15px;
+}
+
+.email_Signup input {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    /* arriba | derecha | abajo | izquierda */
+    padding: 0 10px;
+}
+
+
+.email_Signup label {
+    position: absolute;
+    left: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    color: #8c8c8c;
+    transition: all 0.1s ease;
+}
+
+.email_Signup input:is(:focus, :valid)~label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+}
+
+.email_Signup button {
+    height: 100%;
+    width: 50%;
+    background: rgb(229, 9, 20);
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 14px;
+    border-radius: 0.25rem;
+}
+
+button:hover {
+    background: rgb(193, 17, 25);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    background: linear-gradient(103.24deg, rgba(0, 8, 29, 0.9) 23.83%, rgba(0, 8, 29, 0.3) 96.1%);
+    border: none;
+}
+
+.container .card {
+    position: relative;
+    height: 390px;
+    width: 300px;
+    background: linear-gradient(90deg, rgb(43, 9, 60) 0%, rgb(80, 4, 46) 50%);
+    border-radius: 10px;
+    margin: 15px 5px;
+    left: 50px;
+    flex-direction: column;
+    display: inline-flex;
+    margin-top: 20px;
+}
+
+.card .head {
+    height: 125px;
+    width: 100%;
+    position: relative;
+}
+
+.card .head .img {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 25%;
+    left: 15%;
+    transform: translate(-25%, 0%);
+}
+
+.card .description {
+    height: 200px;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+}
+
+.card .description h2 {
+    margin-top: -10px;
+    font-size: 2rem;
+    word-wrap: break-word;
+}
+
+.card .description p {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.faq {
+    padding: 10px 12%;
+    text-align: start;
+    font-size: 18px;
+    background: linear-gradient(103.24deg, rgba(0, 8, 29, 0.9) 23.83%, rgba(0, 8, 29, 0.3) 96.1%);
+}
+
+.faq h2 {
+    font-weight: 500;
+    font-size: 40px;
+    position: relative;
+    left: -50px;
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label {
+    height: 80px;
+    width: 150%;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    background: rgba(19, 33, 68, 1);
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+    left: -195px;
+    bottom: 50px;
+}
+
+.accordion label::before {
+    background: rgb(29, 48, 98);
+}
+
+.accordion label::after {
+    content: '+';
+    position: absolute;
+    font-size: 34px;
+    right: 20px;
+    transition: transform 0.5s;
+    /*Codigo para rotar el símbolo*/
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+.content {
+    display: block;
+}
+
+.content.hidden {
+    display: none;
+}
+
+.accordion .content {
+    width: 150%;
+    background: rgb(19, 33, 68, 1);
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.1s, padding 0.1s;
+    position: relative;
+    left: -195px;
+    bottom: 50px;
+}
+
+.accordion input[type="radio"]:checked+label+.content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+/* Codigo para rotar el símbolo*/
+
+.accordion input[type="radio"]:checked+label::after {
+    transform: rotate(135deg);
+}
+
+
+.faq h3 {
+    position: relative;
+    left: -50px;
+    bottom: 90px;
+    font-size: 1rem;
+    white-space: wrap;
+}
+
+.faq .email_Signup {
+    position: relative;
+    left: -50px;
+    bottom: 110px;
+}
+
+.faq .email_Signup input {
+    background: rgba(22, 23, 24, 0.8);
+}
+
+.faq .email_Signup button {
+    width: 50%;
+}
+
+.footer {
+    padding: 0 6% 10px;
+    background: linear-gradient(103.24deg, rgba(0, 8, 29, 0.9) 23.83%, rgba(0, 8, 29, 0.3) 96.1%);
+}
+
+.footer h2 {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 30px;
+    margin-left: 28px;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer .row {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .col {
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.footer .col a {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer .btn_Language {
+    padding: 6px 20px;
+    color: #fff;
+    border-radius: 4px;
+    position: relative;
+    left: 35px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+    font-size: 0.875rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    position: relative;
+    left: 35px;
+} 
+
+
+
+/* Tamaño de Pantalla */
+
+@media (max-width: 740px) {
+    .logo {
+        width: 100px;
+        margin-left: -20px;
+    }
+
+    nav button {
+        padding: 8px 20px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .selectedLanguaje select {
+        width: 22px;
+    }
+
+    .header_Content h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .email_Signup button {
+        width: 60%;
+        font-size: 1rem;
+        padding: 15px 25px;
+    }
+
+    .column, .img {
+        flex-basis: 100%;
+    }
+
+    .text-col h2 {
+        font-size: 30px;
+    }
+
+    .text-col p {
+        font-size: 30px;
+    }
+
+    .container .row {
+        padding: 10px 0;
+    }
+
+    .faq h2, h3 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .faq .email_Signup button {
+        width: 70%;
+    }
+
+    .accordion {
+        width: 80%;
+    }
+
+    .accordion li label {
+        position: relative;
+        left: -80px;
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+
+    .accordion .content {
+        position: relative;
+        left: -80px;
+        font-size: 14px;
+    }
+
+    /* Footer */
+
+    .footer h2 {
+        text-align: center;
+    }
+
+    .footer .btn_Language {
+        height: 50px;
+    }
+
+    .footer .btn_Language i {
+        position: relative;
+        right: 35px;
+        top: -8px;
+    }
+
+    .footer .selectedLanguaje select {
+        width: 100%;
+    }
+
+    .footer .selectedLanguaje i {
+        position: relative;
+        left: 78px;
+        top: -22px;
+    }
+    
+    
+}
+
+
+@media (max-width: 820px) {
+    .accordion {
+        width: 80%;
+    }
+
+    .accordion li label {
+        position: relative;
+        left: -120px;
+    }
+
+    .accordion .content {
+        position: relative;
+        left: -120px;
+    }
+    
+}

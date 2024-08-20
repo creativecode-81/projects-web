@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Clon de WhatsApp | Programación Creativa</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="logo">WhatsApp</a>
+            <div class="actions">
+                <a href="#"><ion-icon name="camera"></ion-icon></a>
+                <a href="#"><ion-icon name="search"></ion-icon></a>
+                <a href="#"><ion-icon name="ellipsis-vertical"></ion-icon></a>
+            </div>
+        </header>
+
+        <div class="tabs">
+            <input id="chats" type="radio" name="group" checked>
+            <input id="status" type="radio" name="group">
+            <input id="calls" type="radio" name="group">
+
+            <div class="btns">
+                <label for="chats">Chats <b>4</b></label>
+                <label for="status">Estados</label>
+                <label for="calls">Llamadas</label>
+                <div class="underline"></div>
+            </div>
+
+            <div class="quickBtn">
+                <div class="btn msg"><ion-icon name="chatbubble"></ion-icon></div>
+                <div class="btn camere">
+                    <div class="pencil"><ion-icon name="pencil"></ion-icon></div>
+                    <ion-icon name="camera"></ion-icon>
+                </div>
+                <div class="btn call"><ion-icon name="call"></ion-icon></div>
+            </div>
+
+            <div class="contents">
+                <div class="box chats">
+                    <div class="data">
+                        <div class="chatList">
+                            <div class="block unread open">
+                                <div class="imgBx">
+                                    <img src="img/user.jpeg" alt="User">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Fran Palomino</h4>
+                                        <p class="time">8:20 p.m</p>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Cómo clonar WhatsApp usando html y css</p>
+                                        <b>1</b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block">
+                                <div class="imgBx">
+                                    <img src="img/img1.jpg" alt="User">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Lucía</h4>
+                                        <p class="time">14:50 p.m.</p>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Feliz Cumpleaños</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block unread">
+                                <div class="imgBx">
+                                    <img src="img/img2.jpg" alt="User">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Carlos</h4>
+                                        <p class="time">9:00 a.m.</p>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Hola</p>
+                                        <b>2</b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block">
+                                <div class="imgBx">
+                                    <img src="img/img3.jpg" alt="User">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Karla</h4>
+                                        <p class="time">Ayer</p>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Bien gracias y tú?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block unread unseen">
+                                <div class="imgBx">
+                                    <img src="img/img4.jpg" alt="User">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Noah</h4>
+                                        <p class="time">Ayer</p>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Gracias</p>
+                                        <b>3</b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block">
+                                <div class="imgBx">
+                                    <img src="img/img5.jpg" alt="User">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Sujin Kim</h4>
+                                        <p class="time">14/04/2023</p>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Tienes que actualizar WhatsApp y te saldrá una nueva opción</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block">
+                                <div class="imgBx">
+                                    <img src="img/img6.png" alt="User">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Leo Messi</h4>
+                                        <p class="time">13/04/2023</p>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Oh comprendo, espero mejores pronto</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block unread unseen">
+                                <div class="imgBx">
+                                    <img src="img/img7.jpg" alt="User">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>María Valverde</h4>
+                                        <p class="time">10/04/2023</p>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Cómo te encuentras?</p>
+                                        <b>1</b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block">
+                                <div class="imgBx">
+                                    <img src="img/img8.jpg" alt="User">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Mario Casas</h4>
+                                        <p class="time">09/04/2023</p>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Pues por eso no lo pude ver</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block">
+                                <div class="imgBx">
+                                    <img src="img/img9.jpg" alt="User">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Kasandra</h4>
+                                        <p class="time">08/04/2023</p>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Bye</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box status">
+                    <div class="data">
+                        <div class="chatList">
+                            <div class="block">
+                                <div class="imgBx">
+                                    <img src="img/user.jpeg" alt="User">
+                                </div>
+                                <div class="plus">+</div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Mi estado</h4>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Añade una actualización</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <label>Recientes</label>
+                            <div class="block unseen">
+                                <div class="imgBx">
+                                    <img src="img/img4.jpg" alt="User">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Noah</h4>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Justo ahora</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block unseen">
+                                <div class="imgBx">
+                                    <img src="img/img7.jpg" alt="User">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>María Valverde</h4>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Hace 30 minutos</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <label>Vistos</label>
+                            <div class="block seen">
+                                <div class="imgBx">
+                                    <img src="img/img1.jpg">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Lucía</h4>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Justo ahora</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block seen">
+                                <div class="imgBx">
+                                    <img src="img/img8.jpg">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Mario Casas</h4>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Ayer, 6:00 a.m.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box calls">
+                    <div class="data">
+                        <div class="chatList">
+                            <div class="block">
+                                <div class="imgBx green">
+                                    <ion-icon name="link"></ion-icon>
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Crear enlace de llamada</h4>
+                                    </div>
+                                    <div class="msg_p">
+                                        <p>Comparte un enlace para tu llamada de WhatsApp</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <label>Recientes</label>
+                            <div class="block">
+                                <div class="imgBx">
+                                    <img src="img/img1.jpg">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Lucía</h4>
+                                    </div>
+                                    <div class="msg_p outgoing">
+                                        <p><ion-icon name="arrow-down"></ion-icon> Ayer, 02:16 p.m.</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="call" class="call"></ion-icon>
+                            </div>
+
+                            <div class="block">
+                                <div class="imgBx">
+                                    <img src="img/img3.jpg">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Karla</h4>
+                                    </div>
+                                    <div class="msg_p incoming">
+                                        <p><ion-icon name="arrow-down"></ion-icon> Ayer, 6:00 a.m.</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="videocam" class="videoCam"></ion-icon>
+                            </div>
+
+                            <div class="block">
+                                <div class="imgBx">
+                                    <img src="img/img8.jpg">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Mario Casas</h4>
+                                    </div>
+                                    <div class="msg_p incoming">
+                                        <p><ion-icon name="arrow-down"></ion-icon> 15/04/2023, 6:00 p.m.</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="call" class="call"></ion-icon>
+                            </div>
+
+                            <div class="block">
+                                <div class="imgBx">
+                                    <img src="img/img9.jpg">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>Kasandra</h4>
+                                    </div>
+                                    <div class="msg_p outgoing">
+                                        <p><ion-icon name="arrow-down"></ion-icon> 10/04/2023, 5:00 p.m.</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="videocam" class="videoCam"></ion-icon>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chatBox">
+            <div class="chatHeader">
+                <div class="imgContent">
+                    <ion-icon name="arrow-back" class="back"></ion-icon>
+                    <div class="imgBx">
+                        <img src="img/user.jpeg" alt="User">
+                    </div>
+                    <h3>Fran Palomino <br><span>En línea</span></h3>
+                </div>
+                <div class="actionBtns">
+                    <ion-icon name="videocam"></ion-icon>
+                    <ion-icon name="call"></ion-icon>
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                </div>
+            </div>
+            <div class="msgBox">
+                <div class="bubble">
+                    <div class="msg right">Hola, Una, pregunta?
+                        <br><span class="time">Ayer, 02:20 p.m.</span>
+                    </div>
+                </div>
+
+                <div class="bubble">
+                    <div class="msg left">Hola, si, claro. Dime!!
+                        <br><span class="time">Ayer, 03:30 p.m.</span>
+                    </div>
+                </div>
+
+                <div class="bubble">
+                    <div class="msg right">Es necesario aprender varios lenguajes de programación para conseguir trabajo?
+                        <br><span class="time">Ayer, 02:20 p.m.</span>
+                    </div>
+                </div>
+
+                <div class="bubble">
+                    <div class="msg right no-tail">Con cuáles debería empezar?
+                        <br><span class="time">Ayer, 02:20 p.m.</span>
+                    </div>
+                </div>
+
+                <div class="bubble">
+                    <div class="msg left">No, no es necesario, pero puedes empezar con Python, Php, Go y TypeScrit.
+                        <br><span class="time">Ayer, 03:30 p.m.</span>
+                    </div>
+                </div>
+                
+                <div class="bubble">
+                    <div class="msg left no-tail">Y uno que otros Frameworks, para Python, puedes utilizar Django o Flask
+                        <br><span class="time">Ayer, 03:30 p.m.</span>
+                    </div>
+                </div>
+
+                <div class="msgInput">
+                    <div class="input">
+                        <ion-icon name="happy-outline"></ion-icon>
+                        <input type="text" placeholder="Mensaje">
+                        <ion-icon name="attach-outline" class="attach"></ion-icon>
+                        <ion-icon name="camera"></ion-icon>
+                    </div>
+                    <div class="mic"><ion-icon name="mic"></ion-icon></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="statusBox">
+            <div class="statusHeader">
+                <div class="iconContent">
+                    <ion-icon name="close" class="close icons"></ion-icon>
+                </div>
+                <div class="actionIcons">
+                    <ion-icon name="happy" class="icons"></ion-icon>
+                    <ion-icon name="text" class="icons"></ion-icon>
+                    <ion-icon name="color-palette" class="icons palette"></ion-icon>
+                </div>
+            </div>
+            <div class="textBox">
+                <div class="textArea">
+                    <textarea name="" id="texto" cols="41" rows="20" placeholder="Escribe un estado" autofocus></textarea>
+                </div>
+                <div class="statusIcons">
+                    <div class="span">
+                        <ion-icon name="sync-circle-outline"></ion-icon>
+                        <span>Estados (Contactos)</span>
+                    </div>
+                    <div class="mic_status"><ion-icon name="mic"></ion-icon></div>
+                    <div class="send hidden"><ion-icon name="send"></ion-icon></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- CDN de Sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    <script src="clone.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, .container, .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    padding: 0 10px;
+    min-height: 100vh;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+.container {
+    width: 440px;
+    padding: 30px 30px 38px;
+    background: #fff;
+    border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.container img {
+    max-width: 103px;
+}
+
+/*Rotar la imagen, cuando la alarma se enciende*/
+
+.animate-image {
+    animation: moveImage 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes moveImage {
+    from {
+        transform: rotate(-10deg) translateX(-5px) translateY(-5px);
+    }
+
+    to {
+        transform: rotate(10deg) translateX(5px) translateY(5px);
+    }
+}
+
+
+.container h1 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0;
+    color: #00308F;
+}
+
+.container .content {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.content.disable {
+    cursor: no-drop;
+}
+
+.content .column {
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    width: calc(100% / 3 - 5px);
+}
+
+.content.disable .column {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.column select {
+    width: 100%;
+    height: 53px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 19px;
+}
+
+.container button {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 17px 0;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: #7CFC00;
+}
+
+
+.container button:hover {
+    background: #FFD700;
+}
+
+/* Le damos estilos al modal para que se adapte a nuestro gusto */
+.swal-modal {
+    width: 360px;
+    background: rgb(39, 52, 67);
+}
+
+.swal-title {
+    font-size: 25px;
+    color: #ccc;
+}
+
+.swal-text {
+    color: #ccc;
+}
+
+.swal-button {
+    background-color: #43cea2;
+    margin: 0 106px;
+}

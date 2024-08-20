@@ -1,0 +1,792 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans' sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+
+.container {
+    position: relative;
+    height: 620px;
+    width: 340px;
+    background: #233f52;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+header {
+    position: relative;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #008069;
+}
+
+header .logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+header .actions {
+    position: relative;
+    display: flex;
+    gap: 14px;
+}
+
+header .actions a {
+    color: #fff;
+    display: flex;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.tabs input {
+    display: none;
+    visibility: hidden;
+}
+
+.btns {
+    position: relative;
+    display: flex;
+    background: #008069;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.btns label {
+    width: 33.33%;
+    color: #fff;
+    opacity: 0.75;
+    text-align: center;
+    padding: 5px 0;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.btns label b {
+    position: absolute;
+    left: 80px;
+    top: 2px;
+    min-height: 20px;
+    min-width: 20px;
+    background: #eeeaea;
+    color: #273443;
+    border-radius: 50%;
+    font-size: 1em;
+}
+
+.tabs input:nth-child(1):checked~.btns label:nth-child(1) b {
+    background: #06d755;
+    color: #fff;
+}
+
+.tabs input:nth-child(1):checked~.btns label:nth-child(1),
+.tabs input:nth-child(2):checked~.btns label:nth-child(2),
+.tabs input:nth-child(3):checked~.btns label:nth-child(3) {
+    opacity: 1;
+}
+
+.underline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 33.333%;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.tabs input:nth-child(1):checked~.btns .underline {
+    left: 0;
+}
+
+.tabs input:nth-child(2):checked~.btns .underline {
+    left: 33.333%;
+}
+
+.tabs input:nth-child(3):checked~.btns .underline {
+    left: 66.666%;
+}
+
+.contents {
+    position: relative;
+    width: calc(340px * 3);
+    display: flex;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.contents .box {
+    position: relative;
+    width: 340px;
+}
+
+.tabs input:nth-child(1):checked~.contents {
+    left: 0;
+}
+
+.tabs input:nth-child(2):checked~.contents {
+    left: calc(340px * -1);
+}
+
+.tabs input:nth-child(3):checked~.contents {
+    left: calc(340px * -2);
+}
+
+.contents .data {
+    height: 510px;
+    width: 100%;
+    position: relative;
+}
+
+.chatList {
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+}
+
+.chatList .block {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 10px;
+    display: flex;
+    cursor: pointer;
+}
+
+.chatList .block:hover {
+    background: #335871;
+}
+
+/* Se Comienza a disñar el circulo la img*/
+.chatList .block .imgBx {
+    height: 45px;
+    min-width: 45px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.chatList .block .imgBx img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.chatList .block .details {
+    position: relative;
+    width: 100%;
+}
+
+.chatList .block .details .listHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chatList .block .details .listHead h4 {
+    width: 100%;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.chatList .block .details .listHead .time {
+    font-size: 0.75em;
+    color: #bab8b8;
+}
+
+.msg_p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatList .block .details p {
+    color: #b7adad;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    font-size: 0.9em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+
+.chatList .block.unread .details .listHead .time {
+    color: #06d755;
+}
+
+.chatList .block.unread .details p {
+    color: #b7adad;
+    font-weight: 600;
+}
+
+.msg_p b {
+    height: 20px;
+    min-width: 20px;
+    background: #06d755;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.73em;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+}
+
+.status .plus {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 38px;
+    left: 40px;
+    background: #06d755;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.box label {
+    padding: 0 15px;
+    font-weight: 700;
+    color: #c1b9b9;
+    font-size: 0.85em;
+}
+
+.unseen .imgBx {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #06d755;
+}
+
+
+.seen .imgBx {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #bbb;
+}
+
+.green {
+    background: #06d755;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #fff;
+    rotate: -45deg;
+}
+
+
+.incoming ion-icon {
+    color: #06d755;
+    rotate: 45deg;
+}
+
+.outgoing ion-icon {
+    color: #f00;
+    rotate: 45deg;
+}
+
+.call {
+    font-size: 1.5em;
+    color: #06d755;
+}
+
+.videoCam {
+    font-size: 1.5em;
+    color: #06d755;
+}
+
+.quickBtn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10000;
+}
+
+.quickBtn .btn {
+    height: 50px;
+    width: 50px;
+    background: #06d755;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.35em;
+    cursor: pointer;
+    display: none;
+}
+
+.tabs input:nth-child(1):checked~.quickBtn .btn:nth-child(1) {
+    display: flex;
+}
+
+.tabs input:nth-child(2):checked~.quickBtn .btn:nth-child(2) {
+    display: flex;
+}
+
+.tabs input:nth-child(3):checked~.quickBtn .btn:nth-child(3) {
+    display: flex;
+}
+
+.quickBtn .btn .pencil {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: -50px;
+    background: #3b4d60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.75em;
+}
+
+/* Estilos para el chat*/
+
+.chatBox {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #efe6dd;
+    z-index: 10000;
+}
+
+.chatBox.hide {
+    display: none;
+}
+
+.chatBox::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(img/pattern.png);
+    opacity: 0.05;
+}
+
+.chatHeader {
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    background: #008069;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatHeader .imgContent {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.chatHeader .imgContent ion-icon {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.25em;
+}
+
+ion-icon {
+    cursor: pointer;
+}
+
+.chatHeader .imgContent .imgBx {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.chatHeader .imgContent .imgBx img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+
+.chatHeader .imgContent h3 {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.1em;
+}
+
+.chatHeader .imgContent h3 span {
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+.actionBtns {
+    position: relative;
+    display: flex;
+    color: #fff;
+    gap: 15px;
+}
+
+.msgBox {
+    height: 520px;
+    position: relative;
+    padding: 20px;
+    color: #fff;
+}
+
+
+.msgBox .msg {
+    display: inline-block;
+    max-width: 100%;
+    word-break: break-word;
+}
+
+.msgBox .bubble {
+    border-bottom: 1px solid transparent;
+    margin-bottom: 10px;
+    clear: both;
+}
+
+.msgBox .msg.right {
+    position: relative;
+    padding: 10px;
+    margin: 2px;
+    background: #075e54;
+    border-radius: 10px;
+    float: right;
+}
+
+.msgBox .msg.right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -8px;
+    border: 10px solid transparent;
+    border-top: 10px solid #075e54;
+}
+
+.msgBox .msg.right.no-tail::before {
+    display: none;
+}
+
+
+.msgBox .msg.left {
+    position: relative;
+    padding: 10px;
+    margin: 2px;
+    background: #202c33;
+    border-radius: 10px;
+    float: left;
+}
+
+.msgBox .msg.left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -8px;
+    border: 10px solid transparent;
+    border-top: 10px solid #202c33;
+}
+
+.msgBox .msg.left.no-tail::before {
+    display: none;
+}
+
+.time {
+    width: 100%;
+    position: relative;
+    display: block;
+    font-size: 0.7em;
+    text-align: end;
+    color: #c2bbbb;
+}
+
+.time .checks {
+    color: #00ff62;
+    right: -10px;
+    bottom: 0px;
+}
+
+.msgInput {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.msgInput .input {
+    width: 270px;
+    position: relative;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 40px;
+}
+
+.msgInput .input ion-icon {
+    color: #777;
+    cursor: pointer;
+    font-size: 1.4em;
+}
+
+.msgInput .input input {
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.mic {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    background: #06d755;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.attach {
+    rotate: 45deg;
+}
+
+/* Estilos para el estado*/
+
+.statusBox {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #efe6dd;
+    z-index: 10000;
+}
+
+.statusBox.hide {
+    display: none;
+}
+
+.statusBox::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.05;
+}
+
+.statusHeader {
+    width: 100%;
+    position: relative;
+    background-color: #00ff62;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statusHeader .iconContent {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.statusHeader .iconContent ion-icon {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+ion-icon {
+    cursor: pointer;
+}
+
+
+.actionIcons {
+    position: relative;
+    display: flex;
+    color: #fff;
+    gap: 15px;
+}
+
+.icons {
+    font-size: 1.5em;
+}
+
+.textBox {
+    height: 520px;
+    position: relative;
+    color: #fff;
+}
+
+
+.textArea textarea {
+    height: 558px;
+    width: 344px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    resize: none;
+    padding: 230px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    color: #fff;
+    background: #00ff62;
+    outline: none;
+    border: none;
+}
+
+.statusIcons {
+    width: 100%;
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+    padding: 5px 10px;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statusIcons .span {
+    width: 138px;
+    position: relative;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(39, 52, 67);
+    border-radius: 40px;
+}
+
+.statusIcons .span span {
+    border-radius: 40px;
+    position: absolute;
+    left: 28px;
+    color: #fff;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+
+.statusIcons .span ion-icon {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.mic_status {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    left: 91px;
+    /* Linea agregada*/
+    background: #06d755;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.send {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    background: #06d755;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+.swal-modal {
+    width: 320px;
+    background: rgb(39, 52, 67);
+}
+
+.swal-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.swal-icon--warning__body {
+    height: 12px;
+    width: 5px;
+}
+
+.swal-title {
+    font-size: 25px;
+    color: #ccc;
+}
+
+.swal-text {
+    color: #ccc;
+}
+
+@media screen and (max-width: 376px) {
+    .container {
+        height: 540px;
+        width: 340px;
+    }
+}

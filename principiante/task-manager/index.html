@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- End of Fonts -->
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lista de Tareas | Programación Creativa</title>
+</head>
+
+<body>
+    <!-- Contenido Principal-->
+    <main class="app">
+        <!-- Saludo -->
+        <div class="container">
+            <div class="perfil">
+                <div id="fecha"></div>
+                <h1>Hola, Francode_25</h1>
+                <span>Vamos a cumplir tus metas</span>
+            </div>
+        </div>
+        <!--Final del Saludo-->
+
+        <!--Nueva Tarea-->
+        <section class="create-todo">
+            <h3>Crear una tarea pendiente</h3>
+            <form id="new-todo-form">
+                <h4>¿Qué hay en tu tarea?</h4>
+                <input type="text" placeholder="p.ej. Hacer tarea de Mate" name="content" id="content"/>
+
+                <h4>Elige una Categoría</h4>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="category" id="category1" value="business">
+                        <span class="bubble business"></span>
+                        <div>Negocio</div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="category" id="category2" value="personal">
+                        <span class="bubble personal"></span>
+                        <div>Personal</div>
+                    </label>
+                </div>
+                <input type="submit" value="Agregar tarea">
+            </form>
+        </section>
+        <!-- Final en la nueva tarea-->
+
+        <!-- Lista de Tareas -->
+        <section class="todo-list">
+            <h3>Lista de Tareas</h3>
+            <div class="list" id="todo-list"></div>
+        </section>
+        <!-- Final de la lista de tareas -->
+    </main>
+    <!-- Final del Contenido Principal -->
+    <script src="to-do-list.js"></script>
+</body>
+
+</html>

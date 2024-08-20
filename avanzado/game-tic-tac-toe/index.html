@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Juego Tic Tac Toe | Programación Creativa</title>
+</head>
+<body>
+    <!-- Contenedor -->
+    <div class="container">
+        <header>Tic Tac Toe</header>
+        <div class="content">
+            <div class="title">Selecciona un jugador</div>
+            <div class="options">
+                <button class="player_X">Jugador X</button>
+                <button class="player_O">Jugador O</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seccion para el Tablero de juego -->
+    <div class="board">
+        <div class="details">
+            <div class="players">
+                <span class="Xturn">Turno de X</span>
+                <span class="Oturn">Turno de O</span>
+                <div class="slider"></div>
+            </div>
+        </div>
+
+        <div class="area">
+            <section>
+                <span class="box1"></span>
+                <span class="box2"></span>
+                <span class="box3"></span>
+            </section>
+
+            <section>
+                <span class="box4"></span>
+                <span class="box5"></span>
+                <span class="box6"></span>
+            </section>
+
+            <section>
+                <span class="box7"></span>
+                <span class="box8"></span>
+                <span class="box9"></span>
+            </section>
+        </div>
+    </div>
+
+    <!-- Resultado -->
+    <div class="result">
+        <div class="text"></div>
+        <div class="btn"><button>Reiniciar</button></div>
+    </div>
+
+    <script src="tic-tac-toe.js"></script>
+</body>
+</html>

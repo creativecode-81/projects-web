@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('img/fondo.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #FFF;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.container h1 {
+    font-size: 22px;
+    color: #FFF;
+    display: block;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 30ch;
+    animation: typing 2s steps(30),
+    blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from { width: 0; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.container .inputBox {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+}
+
+.inputBox input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #FFF;
+    padding: 20px 45px 20px 20px;
+}
+
+.inputBox input::placeholder {
+    color: #FFF;
+}
+
+.inputBox i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.container .result {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: 15px 6px 15px;
+}
+
+.container .result p {
+    font-size: 1.2em;
+    color: #FFF;
+}
+
+.container .result p:hover {
+    color: #5ef080;
+}
+
+.container .generateEmailBtn {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    background: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    color: #333;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 40px;
+    margin-bottom: 15px;
+}
+
+.container .generateEmailBtn:hover {
+    background-color: #0056b3;
+    color: #FFF;
+}
+

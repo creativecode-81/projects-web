@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans' sans-serif;
+}
+
+body {
+    background: #e3f2fd;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container .color {
+    margin: 12px;
+    padding: 7px;
+    list-style: none;
+    cursor: pointer;
+    text-align: center;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(52, 87, 220, 0.08);
+    transition: transform 0.3 ease;
+}
+
+.container .color:active {
+    transform: scale(0.95);
+}
+
+.color .box {
+    height: 188px;
+    width: 185px;
+    border-radius: 4px;
+}
+
+.color:hover .box {
+    filter: brightness(107%);
+}
+
+.color .name_value {
+    display: block;
+    margin: 12px 0 8px;
+    font-weight: 600;
+    font-size: 1.15rem;
+    user-select: none;
+    color: #212020;
+}
+
+.color .hex_value {
+    display: block;
+    margin: 12px 0 8px;
+    font-weight: 600;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    user-select: none;
+    color: #212020;
+}
+
+.btn_refresh {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    cursor: pointer;
+    outline: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    color: #fff;
+    background: linear-gradient(177deg, rgba(0,242,96,1) 5%, rgba(5,117,230,1) 100%);
+    padding: 13px 20px;
+    border: 2px solid #fff;
+    transform: translateY(-50%);
+    box-shadow: 0 15px 30px rgba(52, 87, 220, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn_refresh:hover {
+    background: linear-gradient(90deg, rgba(241,0,19,1) 0%, rgba(81,0,175,1) 100%);
+}
+
+@media (max-width: 500px) {
+    .container {
+        margin: 10px;
+    }
+
+    .container .color {
+        width: calc(100% / 2 - 20px);
+        padding: 5px;
+        margin: 8px;
+    }
+
+    .color .box {
+        height: 148px;
+        width: 100%;
+    }
+
+    .color .hex_value {
+        font-size: 1.05rem;
+    }
+
+    .btn_refresh {
+        font-size: 1rem;
+    }
+}

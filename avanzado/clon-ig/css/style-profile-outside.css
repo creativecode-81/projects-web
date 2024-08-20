@@ -1,0 +1,383 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+body {
+    width: 100%;
+    min-width: 1024px;
+    max-width: 1400px;
+    background: #fafafa;
+}
+
+nav {
+    min-width: 1024px;
+    max-width: 1400px;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+    background: #fff;
+    z-index: 1;
+}
+
+.nav-cont {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+/* LOGO */
+
+._aagx {
+    align-items: stretch;
+    border: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    margin-top: 7px;
+    padding: 0;
+    position: relative;
+    transition: opacity .1s ease-out;
+    vertical-align: baseline;
+}
+
+._ab6- {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+/* SEARCH */
+
+.nav-cont .search {
+    width: 250px;
+    background-color: rgba(239, 239, 239, 1);
+    padding: 3px 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+  
+
+.nav-cont .search input {
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: rgba(239, 239, 239, 1);
+    padding-left: 10px;
+    font-size: 15px;
+    color: #8e8e8e;
+}
+
+.buttons {
+    margin: 0 10px;
+}
+
+.buttons button {
+    width: auto;
+    padding: 7px 16px;
+    position: relative;
+    right: 10px;
+    color: #fff;
+    background-color: rgb(0, 149, 246);
+    border: none;
+    outline: none;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #1877F2;
+}
+
+.buttons a {
+    color: rgb(0, 149, 246);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.buttons a:hover {
+    color: rgba(0, 149, 246, 0.4);
+}
+
+/* CONTAINER */
+
+header {
+    width: 60%;
+    margin: auto;
+    transform: translateY(50px);
+    padding: 45px 0;
+}
+
+.profile_container {
+    display: flex;
+}
+
+.profile_container img {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    top: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container_bedhead {
+    margin-left: 100px;
+}
+
+.bedhead_1 {
+    /* width: 290px; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.bedhead_1 h1 {
+    color: #000000;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.bedhead_1 .edit {
+    position: relative;
+    right: 115px;
+    width: auto;
+    padding: 7px 16px;
+    background-color: #efefef;
+    border: 1px solid #dbdbdb;
+    color: #000000;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.bedhead_1 .tools {
+    position: relative;
+    right: 230px;
+    width: auto;
+    padding: 7px 16px;
+    background-color: #efefef;
+    border: 1px solid #dbdbdb;
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.bedhead_1 .edit:hover, .tools:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.bedhead_1 svg {
+    position: relative;
+    left: 5px;
+    cursor: pointer;
+}
+
+.bedhead_2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: rgb(38, 38, 38);
+    font-weight: 600;
+}
+
+.bedhead_2 .followers {
+    position: relative;
+    right: 120px;
+}
+
+.bedhead_2 .follow {
+    position: relative;
+    right: 240px;
+}
+
+
+.bedhead_2 p:hover, b:hover {
+    color: #a2a2a2;
+    cursor: pointer;
+}
+
+
+
+.bedhead_3 h2,
+.bedhead_3 .p-education,
+.bedhead_3 .p-description,
+.bedhead_3 .p-pais,
+.bedhead_3 .p-networks {
+    font-size: 14px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.bedhead_3 .p-education {
+    color: #a2a2a2;
+}
+
+.bedhead_3 .p-link {
+    text-align: none;
+    color: #1e4e7c;
+    text-decoration: none;
+}
+
+.bedhead_3 .p-link:hover {
+    text-decoration: underline;
+}
+
+/* STORIES*/
+
+.story {
+    display: flex;
+    padding: 16px;
+    background-color: white;
+    /* border: 1px solid #ccc; */
+    border-radius: 3px;
+}
+
+.story .stories {
+    width: 17%;
+}
+
+.story .stories a img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid #a2a2a2;
+    padding: 1px;
+    object-fit: cover;
+}
+
+.story .stories a img:hover {
+    transform: scale(1.1);
+}
+
+.story .stories p {
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #262626;
+    text-align: auto;
+    font-size: 12px;
+}
+
+/* POST */
+
+.line {
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    background-color: #dbdbdb;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+}
+
+.main-nav a {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.main-nav .publications {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+main {
+    width: 70%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.mainCont__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    grid-template-rows: repeat(5, auto);
+    gap: 2%;
+    height: auto;
+}
+
+.mainCont__grid div>img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+    height: 10%;
+    font-size: 14px;
+    margin-top: 100px;
+    color: #737373;
+}
+
+.footer_span {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    max-width: 1245px;
+    margin: auto;
+}
+
+.footer_span span {
+    padding: 10px;
+}
+
+.footer_span span a {
+    text-decoration: none;
+    color: #737373;
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
+    padding: 10px;
+}
+
+.select_language {
+    text-align: center;
+    position: relative;
+    right: 170px;
+    bottom: 30px;
+    padding: 0 0 60px;
+
+}
+
+select {
+    width: 10%;
+    border: none;
+    outline: none;
+    color: #737373;
+    cursor: pointer;
+    background: transparent;
+}
