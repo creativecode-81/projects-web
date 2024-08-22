@@ -49,7 +49,7 @@ $(document).ready(function () {
                 content: {
                     element: "img",
                     attributes: {
-                        src: "img/torta.png",
+                        src: "img/cake.png",
                         height: "100",
                         width: "200"
                     }

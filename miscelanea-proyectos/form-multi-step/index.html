@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Formulario de Varios Pasos</title>
+</head>
+
+<body>
+    <div class="container">
+        <span class="transfer">Transferencia</span>
+        <div class="progress-bar">
+            <div class="step">
+                <p>Cantidad</p>
+                <div class="bullet">
+                    <span>1</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+
+            <div class="step">
+                <p>Datos</p>
+                <div class="bullet">
+                    <span>2</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            
+            <div class="step">
+                <p>Metodo</p>
+                <div class="bullet">
+                    <span>3</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+                <p>Confirmación</p>
+                <div class="bullet">
+                    <span>4</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+        </div>
+        <div class="form-outer">
+            <form action="#">
+                <div class="page slide-page">
+                    <div class="title">Ingresa la cantidad a transferir</div>
+                    <div class="field">
+                        <div class="label">Cantidad a transferir</div>
+                        <input type="text" placeholder="S/. 5000" min="1" maxlength="4" autofocus/>
+                    </div>
+                    <div class="field">
+                        <button class="firstNext next">Siguiente <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="title">Ingresa los datos del Usuario</div>
+                    <div class="field">
+                        <div class="label">Nombre</div>
+                        <input type="text" name="username" placeholder="Jhon Doe" minlength="3" maxlength="20" />
+                    </div>
+                    <div class="field">
+                        <div class="label">Email</div>
+                        <input type="email" placeholder="correo@correo.com" autocomplete="on" />
+                    </div>
+                    <div class="field btns">
+                        <button class="prev-1 prev"><i class="fas fa-arrow-left"></i> Regresar</button>
+                        <button class="next-1 next">Siguiente <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="title">Selecciona el método</div>
+                    <div class="field">
+                        <div class="method">
+                            <label for="card" class="lbl_tarjeta">Tarjeta de Débito</label>
+                            <input type="radio" id="card" class="card"/>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="method">
+                            <label for="account">Cuenta de Checkes</label>
+                            <input type="radio" id="account" class="account" />
+                        </div>
+                    </div>
+                    <div class="field btns">
+                        <button class="prev-2 prev"><i class="fas fa-arrow-left"></i> Regresar</button>
+                        <button class="next-2 next">Siguiente <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="title">Datos de la transferencia</div>
+                    <div class="field">
+                        <div class="cant">Cantidad: <span></span> </div>
+                        <div class="user">Usuario: <span></span> </div>
+                        <div class="mail">Email: <span></span> </div>
+                        <div class="pay">Método de pago: <span></span> </div>
+                    </div>
+                    <div class="field btns">
+                        <button class="prev-3 prev"><i class="fas fa-arrow-left"></i> Regresar</button>
+                        <button class="submit" data-progress-text="Transfiriendo" data-complete-text="Completado"> 
+                            <div class="button_progress"></div>
+                            <span class="button_text">Transferir</span>
+                            <i class="fas fa-school"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="mains.js"></script>
+</body>
+
+</html>
